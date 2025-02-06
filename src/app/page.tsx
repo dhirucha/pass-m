@@ -2,6 +2,12 @@ import { AddCard } from "@/components/add-card"
 import { AddPassword } from "@/components/add-password"
 import { YourCards } from "@/components/your-cards"
 import { YourPasswords } from "@/components/your-passwords"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'Pass-m - Home',
+  description: 'This is homepage of password manager',
+}
 
 export default function Home() {
   return (

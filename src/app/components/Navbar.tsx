@@ -1,16 +1,10 @@
 "use client";
 import React from "react";
-import { Moon, MoonIcon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+
 
 const Navbar = () => {
   const { setTheme, theme } = useTheme();
@@ -20,7 +14,7 @@ const Navbar = () => {
   }, [setTheme, theme])
 
   return (
-    <nav className="flex justify-between items-center px-4 h-16 bg-primary/30 text-foreground">
+    <nav className="flex justify-between items-center px-4 h-16 bg-primary/20 text-foreground">
       <span className="font-bold text-xl">Pass-m</span>
       <ul className="flex gap-5 items-center justify-start">
         <li>Home</li>
