@@ -49,6 +49,7 @@ export function AddCard() {
     // ✅ This will be type-safe and validated.
     console.log(values)
   }
+  
 return (
     <Card>
       <CardHeader>
@@ -73,11 +74,45 @@ return (
             </FormItem>
           )}
         />
+
+<FormField
+          control={form.control}
+          name="cardNumber"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Card Number</FormLabel>
+              <FormControl>
+                <Input placeholder="shadcn" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your card number.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+<FormField
+          control={form.control}
+          name="cardNumber"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Card Number</FormLabel>
+              <FormControl>
+                <Input placeholder="shadcn" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your card number.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <Button type="submit">Submit</Button>
       </form>
     </Form>
 
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={form.handleSubmit(onSubmit)}>
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="cardNumber">Card Number</Label>
@@ -121,7 +156,7 @@ return (
             Add Card
           </Button>
         </CardFooter>
-      </form>
+      </form> */}
     </Card>
   )
 }
